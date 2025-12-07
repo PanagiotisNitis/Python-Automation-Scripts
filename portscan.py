@@ -1,6 +1,7 @@
 import socket
 import argparse
 import sys
+import requests
 
 # --- 1. Δημιουργία Argparse Parser ---
 def create_parser():
@@ -77,6 +78,57 @@ def main():
     
     print("\n--- Scan Finished ---\n")
 
+    check_reputation(args.target)
 
+# --- 4. Λογική Threat Intelligence ---
+def check_reputation(ip_address):
+    # ⚠️ ΠΡΟΣΟΧΗ: Αντικατάστησε το 'YOUR_ABUSEIPDB_KEY' με το δικό σου κλειδί API!
+    API_KEY = '31d783e0ccd51f31808739345beddbd1b91959b62bae32a4605a0c9f512fa8bbd257076f0f8c520b'
+
+    # Εάν είναι localhost ή nmap.org, παραλείπουμε τον έλεγχο
+    if ip_address == '127.0.0.1' or ip_address == 'scanme.nmap.org':
+        print(f"ℹ️ Skipping Threat Intelligence check for {ip_address}.")
+        return
+
+    print(f"\n--- Checking Threat Reputation for {ip_address} ---")
+
+    # API Endpoint και Headers (για έλεγχο IP)
+    url = 'https://api.abuseipdb.com/api/v2/check'
+    headers = {
+        'Accept': 'application/json',
+        'Key': API_KEY 
+    }
+
+    params = {
+        'ipAddress': ip_address,
+        'maxAgeInDays': '90',
+        'verbose': 'true'
+    }
+
+    try:
+        response = requests.get(url=url, headers=headers, params=params)
+
+        # Εάν το αίτημα ήταν επιτυχές
+        if response.status_code == 200:
+            data = response.json().get('data', {})
+            confidence = data.get('abuseConfidenceScore', 0)
+            reports = data.get('totalReports', 0)
+
+            print(f"🔥 Abuse Confidence Score: {confidence}% (Based on {reports} reports)")
+
+            # Προσδιορισμός κινδύνου
+            if confidence > 50:
+                print(f"🚨 ALERT: High risk IP! Check reports manually.")
+            elif confidence > 0:
+                print(f"⚠️ Warning: Low risk IP with some reports.")
+            else:
+                print(f"✅ Reputation: IP is Clean or unlisted.")
+        else:
+            print(f"🚨 Error: AbuseIPDB returned status code {response.status_code}.")
+
+    except requests.exceptions.RequestException as e:
+        print(f"🚨 Network Error during Threat Intelligence check: {e}")
+
+# --- 5. Εκκίνηση ---
 if __name__ == "__main__":
     main()
