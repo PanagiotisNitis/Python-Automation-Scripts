@@ -15,3 +15,10 @@ This script was developed to automate the basic **host discovery** phase of secu
 ```bash
 python3 portscan.py 
 # The script will prompt the user to input the target IP or Domain.
+
+### 🛡️ File Integrity Monitor (FIM)
+A Blue Team automation script that monitors critical files for unauthorized changes.
+* **Methodology:** Calculates baseline SHA-256 hashes of target files.
+* **Detection:** Runs a continuous loop to compare current file hashes against the baseline.
+* **Alerting:** Triggers an immediate security alert in the console if a file is modified or deleted.
+* **CIA Triad:** Addresses the **Integrity** aspect of information security.
