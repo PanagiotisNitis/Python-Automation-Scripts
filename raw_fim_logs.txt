@@ -1,0 +1,4 @@
+2025-12-08 10:30:00: ALERT: The hash for file 'secret.txt' was changed by user 'kali'. Action: MODIFIED.
+2025-12-08 10:31:15: INFO: The hash for file 'config.ini' was checked by user 'system'. Action: NO_CHANGE.
+2025-12-08 10:35:40: ALERT: The hash for file 'passwords.txt' was changed by user 'root'. Action: DELETED.
+This is a random line that should fail parsing.
