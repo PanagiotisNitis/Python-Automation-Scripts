@@ -1,29 +1,29 @@
 # 🛡️ Python Security Automation & Tool Kit
 
-### **Στόχος του Project**
-Αυτό το Portfolio αποτελείται από **8 εργαλεία κυβερνοασφάλειας** γραμμένα σε **Python**. Ο κύριος στόχος ήταν να μετατρέψω τη θεωρία σε πράξη, δημιουργώντας scripts που λύνουν πραγματικά προβλήματα σε ρόλους όπως **SOC Analyst (Tier 1)** και **Junior Pen Tester**.
+### **Project Goal**
+This portfolio consists of **8 Cybersecurity Tools** written in **Python**. My main goal was to translate theory into practice by creating scripts that solve real-world problems faced by roles such as **SOC Analyst (Tier 1)** and **Junior Penetration Tester**.
 
-* **Φιλοσοφία:** Επικεντρώνομαι σε εργαλεία που καλύπτουν όλες τις φάσεις: **Reconnaissance**, **Triage**, **Incident Response**, και **Forensics**.
+* **Philosophy:** I focused on building tools that cover the entire security lifecycle: **Reconnaissance**, **Triage**, **Incident Response**, and **Forensics**.
 
 ---
 
-## 🛠️ Τα 8 Εργαλεία και η Δουλειά τους
+## 🛠️ The 8 Tools and Their Practical Application
 
-| Project | Κατηγορία | Τι Κάνει; (Πρακτική Εφαρμογή) | Κρίσιμες Δεξιότητες |
+| Project | Category | What It Does (Practical Application) | Key Skills |
 | :---: | :--- | :--- | :--- |
-| **1. FIM Tool** | **Defensive/Integrity** | Παρακολουθεί κρίσιμα αρχεία (π.χ., ρυθμίσεις συστήματος) για **μη εξουσιοδοτημένες αλλαγές** (Alerting). | **SHA-256 Hashing**, File Integrity Monitoring. |
-| **2. Log Parser** | **Log Analysis/SOC** | Μετατρέπει ακατέργαστα logs σε **δομημένο JSON** για εύκολη φόρτωση σε **SIEM** (Splunk/ELK). | **Regular Expressions (Regex)**, Data Normalization. |
-| **3. Packet Sniffer** | **Forensics** | Συλλαμβάνει πακέτα δικτύου για να εντοπίσει **μη κρυπτογραφημένα credentials** ή payloads σε HTTP κίνηση. | **Scapy**, Network Protocol Analysis (Raw Data). |
-| **4. Port Scanner** | **Network Recon** | Εντοπίζει γρήγορα **ανοιχτές θύρες** και υπηρεσίες σε έναν στόχο για χαρτογράφηση. | **Python Sockets**, TCP Handshake. |
-| **5. Web Fuzzer** | **Web Testing** | Ανακαλύπτει **κρυφά αρχεία** και φακέλους σε Web Servers για επέκταση της επιφάνειας επίθεσης. | **HTTP Requests**, Threading, Status Codes. |
-| **6. Threat Intel** | **Threat Intelligence** | Ελέγχει ύποπτες IPs μέσω **API** για άμεση επικύρωση alerts. | **API Calls**, Risk Scoring. |
-| **7. FTP Brute Force** | **Offensive** | Δοκιμάζει την αντοχή των κωδικών σε υπηρεσίες FTP (Testing weak credentials). | **Networking Protocols**, Error Handling. |
-| **8. Ping Sweep** | **Network Recon** | Βρίσκει γρήγορα **ποιοι hosts** είναι ζωντανοί σε ένα μεγάλο εύρος δικτύου. | **ICMP Protocol**, Threading. |
+| **1. FIM Tool** | **Defensive/Integrity** | Monitors critical files (e.g., system configs) for **unauthorized changes** (Alerting). | **SHA-256 Hashing**, File Integrity Monitoring. |
+| **2. Log Parser** | **Log Analysis/SOC** | Converts raw logs into **structured JSON** for easy ingestion into a **SIEM** (Splunk/ELK). | **Regular Expressions (Regex)**, Data Normalization. |
+| **3. Packet Sniffer** | **Forensics** | Captures network packets to identify **unencrypted credentials** or payloads in HTTP traffic. | **Scapy**, Network Protocol Analysis (Raw Data). |
+| **4. Port Scanner** | **Network Recon** | Quickly detects **open ports** and services on a target to map the attack surface. | **Python Sockets**, TCP Handshake. |
+| **5. Web Fuzzer** | **Web Testing** | Discovers **hidden files** and directories on Web Servers to expand the scope of testing. | **HTTP Requests**, Threading, Status Codes. |
+| **6. Threat Intel** | **Threat Intelligence** | Checks suspicious IPs via **API** for immediate alert validation and risk scoring. | **API Calls**, Risk Scoring. |
+| **7. FTP Brute Force** | **Offensive** | Tests the resilience of passwords on FTP services (Identifying weak credentials). | **Networking Protocols**, Error Handling. |
+| **8. Ping Sweep** | **Network Recon** | Quickly identifies **live hosts** across a large network range. | **ICMP Protocol**, Threading. |
 
 ---
 
-## 💡 Βασικά Takeaways (Για τον Recruiter)
+## 💡 Key Takeaways (For Recruiters)
 
-* **Δεξιότητες:** Έχω πρακτική εμπειρία στη χρήση **Python** για **Network Analysis**, **Data Processing (Logs)**, και **Automated Testing**.
-* **Πλαίσιο:** Ξέρω πώς αυτά τα εργαλεία ενσωματώνονται στον κύκλο ζωής ενός περιστατικού (π.χ., **FIM alert** -> **Log Analysis** -> **Packet Sniffer Forensics**).
-* **Τεχνολογίες:** Χρησιμοποιήθηκαν εξειδικευμένες βιβλιοθήκες όπως **Scapy, hashlib, requests, threading**, πέρα από βασικές γνώσεις Python.
+* **Skills:** I have hands-on experience using **Python** for **Network Analysis**, **Data Processing (Logs)**, and **Automated Testing**.
+* **Context:** I understand how these tools fit into the incident lifecycle (e.g., **FIM alert** $\rightarrow$ **Log Analysis** $\rightarrow$ **Packet Sniffer Forensics**).
+* **Technologies:** I utilized specialized libraries such as **Scapy, hashlib, requests, and threading**, going beyond basic Python scripting.
