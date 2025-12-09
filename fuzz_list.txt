@@ -1,0 +1,5 @@
+echo "admin" > fuzz_list.txt
+echo "login" >> fuzz_list.txt
+echo "backup" >> fuzz_list.txt
+echo "robots.txt" >> fuzz_list.txt
+echo "nonexistentpage" >> fuzz_list.txt
