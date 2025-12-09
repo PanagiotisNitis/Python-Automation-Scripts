@@ -1,0 +1,26 @@
+[
+    {
+        "timestamp": "2025-12-08 10:30:00",
+        "log_level": "ALERT",
+        "event_type": "FIM_CHANGE",
+        "filename": "secret.txt",
+        "user": "kali",
+        "action": "MODIFIED"
+    },
+    {
+        "error": "Unparsable Log Format",
+        "raw_entry": "2025-12-08 10:31:15: INFO: The hash for file 'config.ini' was checked by user 'system'. Action: NO_CHANGE."
+    },
+    {
+        "timestamp": "2025-12-08 10:35:40",
+        "log_level": "ALERT",
+        "event_type": "FIM_CHANGE",
+        "filename": "passwords.txt",
+        "user": "root",
+        "action": "DELETED"
+    },
+    {
+        "error": "Unparsable Log Format",
+        "raw_entry": "This is a random line that should fail parsing."
+    }
+]
