@@ -27,3 +27,15 @@ This portfolio consists of **8 Cybersecurity Tools** written in **Python**. My m
 * **Skills:** I have hands-on experience using **Python** for **Network Analysis**, **Data Processing (Logs)**, and **Automated Testing**.
 * **Context:** I understand how these tools fit into the incident lifecycle (e.g., **FIM alert** $\rightarrow$ **Log Analysis** $\rightarrow$ **Packet Sniffer Forensics**).
 * **Technologies:** I utilized specialized libraries such as **Scapy, hashlib, requests, and threading**, going beyond basic Python scripting.
+
+---
+
+## 🏆 Certifications & Training Badges
+
+Here are the key certifications and badges I have collected:
+
+![Cert Badges](https://www.yourdomain.com/path/to/badges.svg) 
+* **Google Professional Cybersecurity Certificate**
+* **Blue Team Level 1 (BTL1)**
+* **TryHackMe** (SOC Level 1 & 2)
+* **Hack The Box / OffSec** (Mention your relevant achievement or status)
